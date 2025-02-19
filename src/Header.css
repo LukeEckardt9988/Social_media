@@ -1,0 +1,149 @@
+/* Header.css */
+.header {
+  background-color: white; /* Header-Hintergrundfarbe zu Weiß geändert */
+  color: #1e50a5; /* Header-Schriftfarbe zu #1e50a5 geändert */
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
+
+}
+.header-title {
+  grid-column: 1 / -1;        
+  grid-row: 1;
+  text-align: center;        
+}
+
+
+
+.header-left-area { 
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.header-right-area { 
+  grid-column: 3;
+  grid-row: 2;
+  justify-self: end; 
+}
+
+.header .logo {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+
+.header .logo img {
+  height: 60px;
+  width: auto;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer; /* Zeigt, dass es klickbar ist */
+}
+
+
+
+.username-header {
+  margin-left: 15px;
+  margin-right: 15px;
+  color: #23be5f;
+}
+
+.header .profil a {
+  color: #1e50a5; /* Link-Textfarbe zu #1e50a5 geändert */
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.buttonLogout {
+  background-color: transparent;
+  color: #1e50a5; /* Button-Textfarbe zu #1e50a5 geändert */
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.buttonPlus {
+  margin: 20px;
+}
+
+.header .profil .notifications {
+  position: relative;
+  margin-left: 15px;
+}
+
+.header .profil .notifications .count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 6px;
+  font-size: 0.8em;
+}
+
+
+
+
+
+
+
+
+
+
+.button_plus {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  cursor: pointer;
+  border: 4px solid #23be5f;
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  margin-right: 25px;
+}
+
+.button_plus:after {
+  content: '';
+  transform: translate(-50%, -50%);
+  height: 4px;
+  width: 50%;
+  background: #23be5f;
+  top: 50%;
+  left: 50%;
+}
+
+.button_plus:before {
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #23be5f;
+  height: 50%;
+  width: 4px;
+}
+
+.button_plus:hover:before,
+.button_plus:hover:after {
+  background: #fff;
+  transition: 0.2s;
+}
+
+.button_plus:hover {
+  background-color: #23be5f;
+  transition: 0.2s;
+}

@@ -1,0 +1,215 @@
+/* Post.css */
+
+.post-container {
+    border: 1px solid #e0e0e0; /* Leichter Rahmen um den Beitrag */
+    border-radius: 10px; /* Abgerundete Ecken, wie gewünscht */
+    margin-bottom: 20px; /* Abstand zum nächsten Beitrag */
+    padding: 15px;
+    background-color: #fff; /* Hintergrundfarbe weiß oder leicht grau, falls gewünscht */
+  }
+  
+  .post-header {
+    display: flex; /* Header-Bereich flexibel gestalten */
+    align-items: center; /* Vertikale Ausrichtung der Elemente im Header */
+    margin-bottom: 10px; /* Abstand zum Bild/Text unterhalb */
+  }
+  
+  .profile-picture-small {
+    width: 30px; /* Größe des Profilbilds anpassen */
+    height: 30px;
+    border-radius: 50%; /* Macht das Bild rund */
+    margin-right: 10px; /* Abstand zum Benutzernamen */
+  }
+  
+  .username {
+    font-weight: bold; /* Benutzername fett darstellen */
+    font-size: 1em; /* Schriftgröße des Benutzernamens anpassen */
+    color: #1e50a5;
+  }
+  
+  .postImg {
+    width: 100%; /* Beitragsbild auf volle Breite des Containers */
+    max-height: 400px; /* Maximale Höhe des Bildes, optional */
+    object-fit: cover; /* Stellt sicher, dass Bilder gut in den Container passen */
+    border-radius: 3px; /* Optionale abgerundete Ecken für das Bild */
+    margin-bottom: 10px; /* Abstand zum Text unterhalb des Bildes */
+  }
+  
+  .post-text {
+    /* Hier kannst du den Textstil bei Bedarf anpassen */
+    font-size: 0.9em;
+    color: #333; /* Dunkelgraue Textfarbe */
+    line-height: 1.4; /* Zeilenhöhe für bessere Lesbarkeit */
+    
+  }
+  
+  .no-image-available {
+    font-style: italic;
+    color: #777;
+  }
+  .titel {
+    text-align: left;
+    font-weight: 200;
+  }
+
+  .textfeld {
+    background-color: #edf4f5;
+    min-height: 50px;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+
+
+  /* Post.css (Ergänzungen für Likes und Kommentare) */
+
+/* --- Post Actions (Likes, etc.) --- */
+.post-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px; /* Abstand zum Kommentarbereich */
+}
+
+.like-button {
+    background: none;
+    border: none;
+    font-size: 1.2em; /* Größe des Like-Icons anpassen */
+    cursor: pointer;
+    margin-right: 5px; /* Abstand zur Like-Anzahl */
+    padding: 0; /* Button Padding entfernen */
+}
+
+.like-button:focus {
+    outline: none; /* Fokus-Outline entfernen, falls vorhanden */
+}
+
+
+.like-button.liked {
+    color: red; /* Farbe für "geliked" Zustand */
+    /* oder z.B. gefülltes Herz-Icon statt Farbe */
+}
+
+
+.like-count {
+    font-size: 0.9em;
+    color: #555;
+}
+
+
+/* --- Kommentarbereich --- */
+.comment-section {
+    margin-top: 15px;
+    border-top: 1px solid #eee; /* Trennlinie zum Kommentarbereich */
+    padding-top: 10px;
+}
+
+.comment-section h4 {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #777;
+}
+
+
+.comments-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px; /* Optionale max. Höhe, um Kommentarbereich scrollbar zu machen */
+    overflow-y: auto; /* Scrollbalken bei Bedarf */
+}
+
+
+.comment {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #eee; /* Trennlinie zwischen Kommentaren */
+}
+
+.comment:last-child {
+    border-bottom: none; /* Keine Trennlinie beim letzten Kommentar */
+}
+
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.comment-profile-picture-small {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+
+
+.comment-text {
+    font-size: 0.9em;
+    color: #444;
+    margin-top: 5px;      /* Abstand zum Name/Datum-Bereich oberhalb */
+    margin-left: 33px;     /* Einrückung, beginnt unter Profilbild */
+    text-align: left;     /* **NEU: Text linksbündig ausrichten!** */
+    word-wrap: break-word;
+}
+
+.nameDate {
+    display: flex;         /* Flexbox aktivieren */
+    justify-content: space-between; /* Elemente horizontal verteilen: Abstand zwischen Elementen! */
+    align-items: baseline;    /* Vertikale Ausrichtung an der Text-Grundlinie für saubere Ausrichtung */
+    width: 100%;           /* Optional: `nameDate` soll die volle Breite des `comment-header` einnehmen, falls nötig */
+  }
+  
+  .comment-username {
+      font-size: 0.8em;
+      margin-right: 5px; /* Abstand zum Datum (falls das Datum *nicht* ganz rechts kleben soll) */
+      color: #1e50a5; /* Farbe des Benutzernamens */
+  }
+  
+  .comment-date {
+      font-size: 0.65em;
+      color: #777;      /* Farbe des Datums */
+      text-align: right; /* Diese Regel ist hier eigentlich überflüssig, `space-between` schiebt es schon rechts raus */
+  }
+
+/* Kommentar-Formular */
+.comment-form {
+    margin-top: 10px;
+    display: flex; /* Formular-Elemente horizontal anordnen */
+}
+
+
+.comment-input {
+    flex-grow: 1; /* Eingabefeld nimmt verfügbaren Platz ein */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px; /* Abstand zum Button */
+    font-size: 0.9em;
+    resize: vertical; /* Vertikale Größenänderung erlauben, optional */
+}
+
+
+.comment-submit-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blaue Farbe, an dein Theme anpassen */
+    color: white;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.comment-submit-button:hover {
+    background-color: #0056b3; /* Dunkleres Blau bei Hover */
+}
+
+
+.comment-submit-button:focus {
+    outline: none; /* Fokus-Outline entfernen */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Optionale Fokus-Box-Shadow */
+}

@@ -1,0 +1,27 @@
+body {
+  background: linear-gradient(to right, #23be5f, #1e50a5); 
+  font-family: sans-serif;
+  min-height: 100vh;      /* Mindest-Höhe Viewport Höhe, damit Zentrierung im Viewport funktioniert */
+}
+
+.app-container {
+  gap: 10px;
+  padding: 10px;    /* Maximale Breite des app-containers (Beispielwert, anpassen) */
+  width: 90%;            /* Breite relativ zum Viewport (Beispielwert, anpassen) */
+  margin: 20px auto;      /* Optional: Oben/Unten Margin, und `auto` für horizontale Zentrierung (falls `body` nicht Flexbox ist) */
+}
+
+.menu {
+  background-color: #f2f2f2;
+}
+.haupt-inhalt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  max-width: 600px;
+  text-align: center;
+}
+.sidebar {
+  background-color: #f9f9f9;
+}
