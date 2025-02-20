@@ -1,0 +1,30 @@
+CREATE TABLE `beitraege` (
+  `id` int(11) NOT NULL,
+  `benutzer_id` int(11) NOT NULL,
+  `titel` varchar(255) NOT NULL,
+  `text` text DEFAULT NULL,
+  `bild` longblob DEFAULT NULL,
+  `erstellt_am` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `benutzer` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `passwort` varchar(255) NOT NULL,
+  `profile_picture_url` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `kommentare` (
+  `id` int(11) NOT NULL,
+  `beitrag_id` int(11) NOT NULL,
+  `benutzer_id` int(11) NOT NULL,
+  `text` text NOT NULL,
+  `erstellt_am` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `likes` (
+  `id` int(11) NOT NULL,
+  `beitrag_id` int(11) NOT NULL,
+  `benutzer_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
