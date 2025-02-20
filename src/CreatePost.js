@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import "./CreatePost.css";
 
 function CreatePost({ onPostSuccess }) {
   const [titel, setTitel] = useState("");
@@ -68,25 +69,9 @@ function CreatePost({ onPostSuccess }) {
 
   return (
     <div className="create-post-container">
-      <h2>Neuen Beitrag erstellen</h2>
+
       <form onSubmit={handleSubmit} className="upload-form">
-        <div>
-          <label htmlFor="titel">Titel:</label>
-          <input
-            type="text"
-            id="titel"
-            value={titel}
-            onChange={(e) => setTitel(e.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="text">Text:</label>
-          <textarea
-            id="text"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-          />
-        </div>
+        <h3>Neuen Beitrag erstellen</h3>
         <div className="image-preview">
           {bild ? (
             <img
@@ -100,6 +85,27 @@ function CreatePost({ onPostSuccess }) {
             </div>
           )}
         </div>
+
+
+        <div>
+          <label htmlFor="titel">Titel:</label>
+          <input
+            type="text"
+            id="titel"
+            value={titel}
+            onChange={(e) => setTitel(e.target.value)}
+          />
+        </div>
+
+        <div>
+          <label htmlFor="text">Text:</label>
+          <textarea
+            id="text"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
+        </div>
+
         <input
           type="file"
           accept="image/*"
@@ -108,10 +114,11 @@ function CreatePost({ onPostSuccess }) {
           ref={fileInputRef}
           name="bild" // Name muss mit Multer übereinstimmen
         />
-        <button type="button" onClick={handleUploadClick}>
-          Bild auswählen
-        </button>
+
+        <button type="button" onClick={handleUploadClick}>Bild auswählen</button>
+
         <button type="submit">Beitrag erstellen</button>
+
         {uploadMessage && <p className="upload-message success">{uploadMessage}</p>}
         {uploadError && <p className="upload-message error">{uploadError}</p>}
       </form>

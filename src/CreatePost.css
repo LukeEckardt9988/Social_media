@@ -1,0 +1,104 @@
+.create-post-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+}
+
+#titel {
+    min-width: 400px;
+}
+#text {
+    min-width: 400px;
+}
+
+
+.create-post-container h2 {
+    margin-bottom: 10px;
+    /* Abstand zum Formular */
+}
+
+.upload-form div {
+    margin-bottom: 10px;
+    /* Abstand zwischen den Formularelementen */
+}
+
+.upload-form label {
+    display: block;
+    /* Label über dem Input-Feld */
+    margin-bottom: 5px;
+}
+
+.upload-form input[type="text"],
+.upload-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Padding und Border in die Breite einrechnen */
+}
+
+.upload-form textarea {
+    min-height: 100px;
+    /* Mindestgröße des Textarea */
+    resize: vertical;
+    /* Vertikale Größenänderung zulassen */
+}
+
+.image-preview {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    /* Volle Breite */
+    max-height: 300px;
+    /* Optionale maximale Höhe */
+}
+
+.preview-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.placeholder-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    /* Höhe des Platzhalters */
+    color: #999;
+    font-style: italic;
+}
+
+.upload-form button {
+    background-color: #1e50a5;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    /* Abstand zwischen den Buttons */
+}
+
+.upload-form button:hover {
+    background-color: #143870;
+}
+
+.upload-message {
+    margin-top: 10px;
+}
+
+.upload-message.success {
+    color: green;
+}
+
+.upload-message.error {
+    color: red;
+}
